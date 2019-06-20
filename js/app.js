@@ -63,11 +63,13 @@ console.log(sumDigits(42));
 // "Commit 3 - Digit Sum".
 // 4. Pythagoras
 // Write a function calculateSide that takes two arguments: sideA and sideB, and returns the solution for sideC using the Pythagorean theorem.
-//
+//Pythagorean Theorem: a^2 + b^2 = c^2
 // hint: discover the Pythagorean Theorem on a website called google.com
 // hint: checkout the Math methods in javascript
-//
-// console.log(calculateSide(8, 6));
+const calculateSide = (sideA, sideB) => {
+  return Math.sqrt(sideA**2 + sideB**2);
+}
+console.log(calculateSide(8, 6));
 // => 10
 // 🔴 **Commit your work.**
 // The commit message should read:
