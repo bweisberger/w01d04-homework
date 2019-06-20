@@ -48,8 +48,15 @@ console.log(checkPalindrome("A man a plan a canal panama"));
 // "Commit 2 - Palindrome".
 // 3. Digit Sum
 // Write a function sumDigits that accepts a number and returns the sum of its digits.
-//
-// console.log(sumDigits(42));
+const sumDigits = (num) => {
+  numArr = num.toString().split("");
+  sum = 0;
+  for (let i = 0; i < numArr.length; i++) {
+    sum += Number(numArr[i]);
+  }
+  return sum;
+}
+console.log(sumDigits(42));
 // => 6;
 // 🔴 **Commit your work.**
 // The commit message should read:
