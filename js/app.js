@@ -1,3 +1,4 @@
+console.log("Working");
 // 1. Verbal questions
 // Write answers to the following questions as comments.
 //
@@ -12,11 +13,36 @@
 // "Commit 1 - Verbal questions".
 // 2. Palindrome again.
 // Write a function checkPalindrome that accepts a single argument, a string. Yes, you've done it before, but do it again. Later in this assignment we're gonna beef up our palindrome function some. See if you can do it without looking back at your previous answer. The function should return true if the string is a palindrome, false if not. Make sure your function will give the correct answer for words with capital letters.
-//
-// console.log(checkPalindrome("Radar"));
-//  => true
-// console.log(checkPalindrome("Borscht"));
+const checkPalindrome = (str) =>  {
+  littleStr = str.toLowerCase();
+  reverseStr = ""
+  for (let i = str.length-1; i >= 0; i--) {
+    if (littleStr[i] !== " ") {
+    reverseStr += littleStr[i];
+    }
+  }
+  console.log(littleStr);
+  console.log(reverseStr);
+  if (reverseStr !== littleStr.split(" ").join("")) {
+    return false;
+  }
+  // for(let i = 0; i < str.length; i++)
+  // {
+  //   while (i < str.length-i)
+  //   {
+  //     if (littleStr[i] !== littleStr[(str.length-1)-i]){
+  //       return false;
+  //     }
+  //   }
+  // }
+  return true;
+}
+
+console.log(checkPalindrome("Radar"));
+// => true
+console.log(checkPalindrome("Borscht"));
 // => false
+console.log(checkPalindrome("A man a plan a canal panama"));
 // 🔴 **Commit your work.**
 // The commit message should read:
 // "Commit 2 - Palindrome".
