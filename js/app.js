@@ -95,10 +95,33 @@ console.log(sumArray([1, 2, 3, 4, 5, 6]));
 //
 // Step One
 // Write a function called checkPrime that will test whether a number is Prime. The function will return true (Boolean) if Prime, false if not. Hint: Check every number up to the square root. To do this, try a for loop.
-//
+const checkPrime = (num) => {
+  for (let i = 2; i <= Math.sqrt(num); i++) {
+     if (num % i === 0) {
+       return false;
+     }
+  }
+  return true;
+}
+
+console.log(checkPrime(5));
+console.log(checkPrime(25));
+console.log(checkPrime(23));
+console.log(checkPrime(157));
+console.log(checkPrime(153));
 // Step Two
 // Write another function called printPrimes that will print (console log) all the Primes up to an arbitrary limit. For example, if you invoke your function with printPrimes(97), it will print all the Prime numbers up to and including 97. This function can call on the previous checkPrime function.
-//
+const printPrimes = (num) => {
+  const primes = [];
+  for (let i = 2; i <= num; i++) {
+    if (checkPrime(i)) {
+      primes.push(i)
+    }
+  }
+  console.log(primes);
+}
+
+printPrimes(97);
 // 🔴 **Commit your work.**
 // The commit message should read:
 // "Commit 6 - Prime Numbers".
